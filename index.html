@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>দ্বিনদার পাএ/পাএীর সন্ধান</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="allContainer">
+      <header>
+        <h1>দ্বিনদার পাএ/পাএীর সন্ধান</h1>
+        <p>এটি একটি ম্যারেজ মিডিয়া, ফরম পুরনে কোনো টাকা লাগে না।</p>
+      </header>
+      <form action="" class="Form">
+        <div class="commonRadioDiv">
+          <h3>আপনি কি চান? <span class="red">*</span></h3>
+          <div>
+            <input
+              type="radio"
+              name="patroPatri"
+              id="boy"
+              class="radioBtn patroPatri"
+              value="পাত্র"
+              required
+            />
+            <label for="boy">পাত্র</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              name="patroPatri"
+              id="girl"
+              class="radioBtn patroPatri"
+              value="পাত্রী"
+              required
+            />
+            <label for="girl">পাত্রী</label>
+          </div>
+        </div>
+
+        <!--       -->
+        <div class="div2">
+          <h3>নাম- <span class="red">*</span></h3>
+          <input
+            type="text"
+            class="name"
+            name="name"
+            id="name"
+            placeholder="Enter your name..."
+            minlength="3"
+            maxlength="100"
+            required
+          />
+        </div>
+        <!--  -->
+        <div class="commonInput">
+          <h3>বয়স- <span class="red">*</span></h3>
+          <input
+            type="number"
+            name="age"
+            id="age"
+            placeholder="Enter your age..."
+            maxlength="20"
+            required
+          />
+        </div>
+        <!--  -->
+
+        <div class="commonInput">
+          <h3>উচ্চতা- <span class="red">*</span></h3>
+          <input
+            type="text"
+            name="height"
+            id="height"
+            placeholder="Enter your height..."
+            maxlength="20"
+            required
+          />
+        </div>
+        <!--  -->
+        <div class="commonInput">
+          <h3>ওজন- <span class="red">*</span></h3>
+          <input
+            type="text"
+            class="weight"
+            name="weight"
+            placeholder="Enter your weight..."
+            maxlength="20"
+          />
+        </div>
+        <!--  -->
+        <div class="commonInput">
+          <h3>গায়ের রং- <span class="red">*</span></h3>
+          <input
+            type="text"
+            class="gayerRong"
+            name="gayerRong"
+            placeholder="..."
+            maxlength="20"
+          />
+        </div>
+        <!--  -->
+        <div class="commonInput">
+          <h3>
+            বৈবাহিক অবস্থা, (ডিবোর্সি হলে বা বাচ্চা থাকলে কারন সহ উল্লেখ করেন।)
+          </h3>
+          <input
+            type="text"
+            name="boibahicObostha"
+            class="boibahicObostha"
+            placeholder="..."
+            maxlength="20"
+          />
+        </div>
+        <!--  -->
+        <div class="commonInput">
+          <h3>স্থায়ী ঠিকানা- <span class="red">*</span></h3>
+          <input
+            type="text"
+            class="sthaiThikana"
+            name="sthaiThikana"
+            placeholder="..."
+            maxlength="20"
+            required
+          />
+        </div>
+        <!--  -->
+        <div class="commonInput">
+          <h3>বর্তমান ঠিকানা-</h3>
+          <input
+            type="text"
+            class="bortomanThikana"
+            name="bortomanThikana"
+            placeholder="..."
+            maxlength="20"
+          />
+        </div>
+        <!--  -->
+        <div class="commonInput">
+          <h3>পেশা- <span class="red">*</span></h3>
+          <input
+            type="text"
+            name="pesha"
+            class="pesha"
+            placeholder="..."
+            maxlength="20"
+            required
+          />
+        </div>
+        <!--  -->
+        <div class="commonInput">
+          <h3>মাসিক ইনকাম-</h3>
+          <input
+            type="text"
+            name="monthSalary"
+            class="monthSalary"
+            placeholder="..."
+            maxlength="20"
+          />
+        </div>
+        <!--  -->
+        <div class="commonInput">
+          <h3>শিক্ষাগত যোগ্যতা- <span class="red">*</span></h3>
+          <input
+            type="text"
+            name="class"
+            class="class"
+            placeholder="..."
+            maxlength="20"
+            required
+          />
+        </div>
+        <!--  -->
+        <div class="commonInput">
+          <h3>বাবার পেশা-</h3>
+          <input
+            type="text"
+            name="babarPesha"
+            placeholder="..."
+            maxlength="20"
+            class="babarPesha"
+          />
+        </div>
+        <!--  -->
+        <div class="commonInput">
+          <h3>মায়ের পেশা-</h3>
+          <input
+            type="text"
+            name="mayerPesha"
+            placeholder="..."
+            maxlength="20"
+            class="mayerPesha"
+          />
+        </div>
+        <!--  -->
+
+        <div class="commonRadioDiv">
+          <h3>নিয়োমিত নামাজ পড়েন? <span class="red">*</span></h3>
+          <div>
+            <input
+              type="radio"
+              name="namazPoreKina"
+              id="3255"
+              class="radioBtn"
+              value="নামাজ পড়ি "
+              required
+            />
+            <label for="3255">হ্যা</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              name="namazPoreKina"
+              id="546546"
+              class="radioBtn"
+              value="নামাজ পড়ি না"
+              required
+            />
+            <label for="546546">না</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              name="namazPoreKina"
+              id="35746"
+              class="radioBtn"
+              value="নামাজ মাঝে মাঝে পড়ি "
+              required
+            />
+            <label for="35746">মাঝে মাঝে পড়ি</label>
+          </div>
+        </div>
+        <!--  -->
+
+        <div class="commonRadioDiv">
+          <h3>কুরআন তেলাওয়াত জানেন? <span class="red">*</span></h3>
+          <div>
+            <input
+              type="radio"
+              name="quranPareKina"
+              id="24158"
+              class="radioBtn"
+              value="কুরআন জানি"
+              required
+            />
+            <label for="24158">হ্যা</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              name="quranPareKina"
+              id="2418"
+              class="radioBtn"
+              value="কুরআন জানি না"
+              required
+            />
+            <label for="2418">না</label>
+          </div>
+        </div>
+        <!--  -->
+
+        <div class="commonRadioDiv">
+          <h3>
+            আপনি কি স্বামী হারা / ডিভোর্সি / সন্তান আছে এমন কাউকে বিবাহ করতে
+            চান?-
+          </h3>
+          <div>
+            <input
+              type="radio"
+              name="apniKiSontanAseEmonKawKBiyeKorteChan"
+              id="2415855"
+              class="radioBtn"
+              value="স্বামী হারা/ডিভোর্সি/সন্তান আছে এমন কাউকে বিবাহ করতে চাই"
+            />
+            <label for="2415855">হ্যা</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              name="apniKiSontanAseEmonKawKBiyeKorteChan"
+              id="2414268"
+              class="radioBtn"
+              value="স্বামী হারা/ডিভোর্সি/সন্তান আছে এমন কাউকে বিবাহ করতে চাই না"
+            />
+            <label for="2414268">না</label>
+          </div>
+        </div>
+        <!--  -->
+        <div class="commonRadioDiv">
+          <h3>
+            শারীরিক অঙ্গহানি / বড় ধরনের কোনো রোগ আছে? <span class="red">*</span>
+          </h3>
+          <div>
+            <input
+              type="radio"
+              name="sharirikOngohaniAseKina"
+              id="241155"
+              class="radioBtn"
+              value=" শারীরিক অঙ্গহানি / বড় ধরনের কোনো রোগ আছে"
+              required
+            />
+            <label for="241155">হ্যা</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              name="sharirikOngohaniAseKina"
+              id="241174268"
+              class="radioBtn"
+              value=" শারীরিক অঙ্গহানি / বড় ধরনের কোনো রোগ নাই"
+              required
+            />
+            <label for="241174268">না</label>
+          </div>
+        </div>
+        <!--  -->
+
+        <div class="commonRadioDiv">
+          <h3>(পুরুষ হলে) সুন্নতি দাড়ি আছে?</h3>
+          <div>
+            <input
+              type="radio"
+              name="dariAseKina"
+              id="24f1155"
+              class="radioBtn"
+              value="সুন্নতি দাড়ি আছে"
+            />
+            <label for="24f1155">হ্যা</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              name="dariAseKina"
+              id="24117p4268"
+              class="radioBtn"
+              value="সুন্নতি দাড়ি নাই"
+            />
+            <label for="24117p4268">না</label>
+          </div>
+        </div>
+        <!--  -->
+        <div class="commonRadioDiv">
+          <h3>(মেয়ে হলে) খাছ পর্দা করেন?</h3>
+          <div>
+            <input
+              type="radio"
+              name="pordaKoreKina"
+              id="24fa55"
+              class="radioBtn"
+              value="পর্দা করি"
+            />
+            <label for="24fa55">হ্যা</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              name="pordaKoreKina"
+              id="241p4268"
+              class="radioBtn"
+              value="পর্দা করি না"
+            />
+            <label for="241p4268">না</label>
+          </div>
+        </div>
+        <!--  -->
+
+        <div class="commonInput">
+          <h3>
+            দ্বিনদার পাএ / পাত্রীর সন্ধান পেজে আপনি কি ধরনের জান্নাতি সাথী চান?
+          </h3>
+          <input
+            type="text"
+            name="jmonJannatiSathiChai"
+            class="jmonJannatiSathiChai"
+            placeholder="..."
+            maxlength="2000"
+          />
+        </div>
+        <!--  -->
+        <div class="commonInput">
+          <h3>পাত্র/পাত্রীর বয়স-</h3>
+          <input
+            type="text"
+            name="patroPatrirBoyos"
+            class="patroPatrirBoyos"
+            placeholder="..."
+            maxlength="20"
+          />
+        </div>
+        <!--  -->
+        <div class="commonInput">
+          <h3>পাত্র/পাত্রীর উচ্চতা-</h3>
+          <input
+            type="text"
+            name="patroPatrirHeight"
+            class="patroPatrirHeight"
+            placeholder="..."
+            maxlength="20"
+          />
+        </div>
+        <!--  -->
+        <div class="commonInput">
+          <h3>পাত্র/পাত্রীর গায়ের রং-</h3>
+          <input
+            type="text"
+            name="patroPatrirGayerRong"
+            class="patroPatrirGayerRong"
+            placeholder="..."
+            maxlength="20"
+          />
+        </div>
+        <!--  -->
+        <div class="commonInput">
+          <h3>পাত্র/পাত্রীর লেখাপড়া-</h3>
+          <input
+            type="text"
+            name="patroPatrirLekhapora"
+            class="patroPatrirLekhapora"
+            placeholder="..."
+            maxlength="20"
+          />
+        </div>
+        <!--  -->
+
+        <div class="commonInput">
+          <h3>এক্সট্রা কিছু লেখার থাকলে লিখুনঃ</h3>
+          <input
+            type="text"
+            name="extraKisuLekha"
+            class="extraKisuLekha"
+            placeholder="..."
+            maxlength="2000"
+          />
+        </div>
+        <!--  -->
+        <div class="commonInput">
+          <h3>আপনার একটি ছবি দিন</h3>
+          <p>
+            আপনার ছবিটি আমাদের কাছে আমানত হিসেবে থাকবে, শুধু আগ্রহী পাএ পাএীদের
+            দেখানো হবে। এটি ফেইসবুকে বা সামাজিক যোগাযোগ মাধ্যমে প্রকাশ করা হবে
+            না। আপনি যদি খাচ পর্দা করে থাকেন, তাহলে প্রয়োজন নেই। ছবি আপলোড করতে
+            "Choose File" অপশোনে ক্লিক করেন।
+          </p>
+          <input type="file" name="Image" class="img" />
+        </div>
+        <!--  -->
+        <div class="commonInput">
+          <h3>আপনার মোবাইল নাম্বার<span class="red">*</span></h3>
+
+          <p>আপনার এই নাম্বারেই পাএ/ পাএী বা তাদের অভিবাবক কল দিবে।</p>
+          <input
+            type="number"
+            name="phoneNumber"
+            class="phoneNumber"
+            maxlength="11"
+            placeholder="01xxxxxxxxx"
+            required
+          />
+        </div>
+        <!--  -->
+        <div class="commonInput">
+          <h3>ফেইসবুক আইডির লিঙ্ক-</h3>
+          <p>পরবর্তী যোগাযোগের জন্য আপনার ফেইজবুক আইডি নাম ও লিংক দিন।</p>
+          <input
+            type="text"
+            name="FBIdLink"
+            class="FBIdLink"
+            maxlength="200"
+            placeholder="Facebook Id Link..."
+          />
+        </div>
+        <!--  -->
+        <div class="commonInput">
+          <h3>আমাদের সেবাটি আপনার কাছে কেমন লাগলো?-</h3>
+          <input
+            type="text"
+            name="amaderShebatiKmnLaglo"
+            class="amaderShebatiKmnLaglo"
+            maxlength="200"
+            placeholder="..."
+          />
+        </div>
+
+        <div class="btns">
+          <button type="submit" class="submitBtn">Submit</button>
+          <button type="reset">Clear Form</button>
+        </div>
+      </form>
+    </div>
+    <!--  -->
+
+    <!--  -->
+    <script src="./script.js"></script>
+  </body>
+</html>
