@@ -33,6 +33,8 @@ const img = document.querySelector(".img");
 const phoneNumber = document.querySelector(".phoneNumber");
 const FBIdLink = document.querySelector(".FBIdLink");
 const amaderShebatiKmnLaglo = document.querySelector(".amaderShebatiKmnLaglo");
+//////////////////
+const submitBtn = document.querySelector(".submitBtn");
 
 //////////////////
 //////////////////
@@ -164,7 +166,8 @@ const inputFunc = () => {
 };
 //////////////////
 //////////////////
-Form.addEventListener("submit", () => {
+Form.addEventListener("submit", (e) => {
+  e.preventDefault();
   patroPatriFunc();
   //////////////////
   inputFunc();
@@ -175,35 +178,46 @@ Form.addEventListener("submit", () => {
   sharirikOngohaniAseKinaFunc();
   dariAseKinaFunc();
   pordaKoreKinaFunc();
-
-  console.log(patroPatriValue);
-  console.log(nameValue);
-  console.log(ageValue);
-  console.log(heightValue);
-  console.log(weightValue);
-  console.log(gayerRongValue);
-  console.log(boibahicObosthaValue);
-  console.log(sthaiThikanaValue);
-  console.log(bortomanThikanaValue);
-  console.log(peshaValue);
-  console.log(monthSalaryValue);
-  console.log(classValue);
-  console.log(babarPeshaValue);
-  console.log(mayerPeshaValue);
-  console.log(namazPoreKinaValue);
-  console.log(quranPareKinaValue);
-  console.log(apniKiSontanAseEmonKawKBiyeKorteChanValue);
-  console.log(sharirikOngohaniAseKinaValue);
-  console.log(dariAseKinaValue);
-  console.log(pordaKoreKinaValue);
-  console.log(jmonJannatiSathiChaiValue);
-  console.log(patroPatrirBoyosValue);
-  console.log(patroPatrirHeightValue);
-  console.log(patroPatrirGayerRongValue);
-  console.log(patroPatrirLekhaporaValue);
-  console.log(extraKisuLekhaValue);
-  console.log(imgValue);
-  console.log(phoneNumberValue);
-  console.log(FBIdLinkValue);
-  console.log(amaderShebatiKmnLagloValue);
+  /////////////////
+  //////////////////
+  axios
+    .post("https://dindar-patropatri-api.herokuapp.com/data", {
+      patroPatri: patroPatriValue,
+      namee: nameValue,
+      age: ageValue,
+      height: heightValue,
+      weight: weightValue,
+      gayerRong: gayerRongValue,
+      boibahicObostha: boibahicObosthaValue,
+      sthaiThikana: sthaiThikanaValue,
+      bortomanThikana: bortomanThikanaValue,
+      pesha: peshaValue,
+      monthSalary: monthSalaryValue,
+      clas: classValue,
+      babarPesha: babarPeshaValue,
+      mayerPesha: mayerPeshaValue,
+      namazPoreKina: namazPoreKinaValue,
+      quranPareKina: quranPareKinaValue,
+      apniKiSontanAseEmonKawKBiyeKorteChan:
+        apniKiSontanAseEmonKawKBiyeKorteChanValue,
+      sharirikOngohaniAseKina: sharirikOngohaniAseKinaValue,
+      dariAseKina: dariAseKinaValue,
+      pordaKoreKina: pordaKoreKinaValue,
+      jmonJannatiSathiChai: jmonJannatiSathiChaiValue,
+      patroPatrirBoyos: patroPatrirBoyosValue,
+      patroPatrirHeight: patroPatrirHeightValue,
+      patroPatrirGayerRong: patroPatrirGayerRongValue,
+      patroPatrirLekhapora: patroPatrirLekhaporaValue,
+      extraKisuLekha: extraKisuLekhaValue,
+      img: imgValue,
+      phoneNumber: phoneNumberValue,
+      FBIdLink: FBIdLinkValue,
+      amaderShebatiKmnLaglo: amaderShebatiKmnLagloValue,
+    })
+    .then(function () {
+      console.log();
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
 });
