@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>দ্বিনদার পাএ/পাএীর সন্ধান</title>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -13,7 +16,7 @@
         <h1>দ্বিনদার পাএ/পাএীর সন্ধান</h1>
         <p>এটি একটি ম্যারেজ মিডিয়া, ফরম পুরনে কোনো টাকা লাগে না।</p>
       </header>
-      <form action="" class="Form">
+      <form class="Form" onsubmit="submitFormData()">
         <div class="commonRadioDiv">
           <h3>আপনি কি চান? <span class="red">*</span></h3>
           <div>
@@ -88,6 +91,7 @@
             name="weight"
             placeholder="Enter your weight..."
             maxlength="20"
+            required
           />
         </div>
         <!--  -->
@@ -99,6 +103,7 @@
             name="gayerRong"
             placeholder="..."
             maxlength="20"
+            required
           />
         </div>
         <!--  -->
@@ -204,8 +209,8 @@
               name="namazPoreKina"
               id="3255"
               class="radioBtn"
-              value="নামাজ পড়ি "
               required
+              value="নামাজ পড়ি "
             />
             <label for="3255">হ্যা</label>
           </div>
