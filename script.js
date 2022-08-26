@@ -35,6 +35,7 @@ const FBIdLink = document.querySelector(".FBIdLink");
 const amaderShebatiKmnLaglo = document.querySelector(".amaderShebatiKmnLaglo");
 //////////////////
 const submitBtn = document.querySelector(".submitBtn");
+const alertTag = document.querySelector(".alert");
 
 //////////////////
 //////////////////
@@ -216,8 +217,12 @@ Form.addEventListener("submit", (e) => {
     })
     .then(function () {
       console.log();
+      alert("Your information has been sent.");
+      alertTag.textContent = "Your information has been sent.";
     })
     .catch(function (error) {
       console.log(error);
     });
+  //////////////////
+  //////////////////
 });
