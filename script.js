@@ -29,7 +29,7 @@ const patroPatrirHeight = document.querySelector(".patroPatrirHeight");
 const patroPatrirGayerRong = document.querySelector(".patroPatrirGayerRong");
 const patroPatrirLekhapora = document.querySelector(".patroPatrirLekhapora");
 const extraKisuLekha = document.querySelector(".extraKisuLekha");
-const img = document.querySelector(".img");
+
 const phoneNumber = document.querySelector(".phoneNumber");
 const FBIdLink = document.querySelector(".FBIdLink");
 const amaderShebatiKmnLaglo = document.querySelector(".amaderShebatiKmnLaglo");
@@ -135,7 +135,7 @@ let nameValue,
   patroPatrirGayerRongValue,
   patroPatrirLekhaporaValue,
   extraKisuLekhaValue,
-  imgValue,
+
   phoneNumberValue,
   FBIdLinkValue,
   amaderShebatiKmnLagloValue;
@@ -160,7 +160,7 @@ const inputFunc = () => {
   patroPatrirGayerRongValue = patroPatrirGayerRong.value;
   patroPatrirLekhaporaValue = patroPatrirLekhapora.value;
   extraKisuLekhaValue = extraKisuLekha.value;
-  imgValue = img.value;
+ 
   phoneNumberValue = phoneNumber.value;
   FBIdLinkValue = FBIdLink.value;
   amaderShebatiKmnLagloValue = amaderShebatiKmnLaglo.value;
@@ -212,7 +212,7 @@ Form.addEventListener("submit", (e) => {
       patroPatrirGayerRong: patroPatrirGayerRongValue,
       patroPatrirLekhapora: patroPatrirLekhaporaValue,
       extraKisuLekha: extraKisuLekhaValue,
-      img: imgValue,
+     
       phoneNumber: phoneNumberValue,
       FBIdLink: FBIdLinkValue,
       amaderShebatiKmnLaglo: amaderShebatiKmnLagloValue,
