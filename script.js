@@ -169,6 +169,7 @@ const inputFunc = () => {
 //////////////////
 Form.addEventListener("submit", (e) => {
   e.preventDefault();
+  alertTag.textContent = "Sending...";
   patroPatriFunc();
   //////////////////
   inputFunc();
@@ -183,7 +184,7 @@ Form.addEventListener("submit", (e) => {
   //////////////////
   axios
     .post("https://dindar-patropatri-api.herokuapp.com/data", {
-    alertTag.textContent = "Sending...";
+    
       patroPatri: patroPatriValue,
       namee: nameValue,
       age: ageValue,
