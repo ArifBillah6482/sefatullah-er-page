@@ -183,6 +183,7 @@ Form.addEventListener("submit", (e) => {
   //////////////////
   axios
     .post("https://dindar-patropatri-api.herokuapp.com/data", {
+    alertTag.textContent = "Sending...";
       patroPatri: patroPatriValue,
       namee: nameValue,
       age: ageValue,
@@ -214,6 +215,7 @@ Form.addEventListener("submit", (e) => {
       phoneNumber: phoneNumberValue,
       FBIdLink: FBIdLinkValue,
       amaderShebatiKmnLaglo: amaderShebatiKmnLagloValue,
+    
     })
     .then(function () {
       console.log();
