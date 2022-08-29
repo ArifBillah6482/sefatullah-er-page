@@ -228,4 +228,45 @@ Form.addEventListener("submit", (e) => {
     });
   //////////////////
   //////////////////
+  axios
+    .post("https://sifatullah-file-api.herokuapp.com/data", {
+      patroPatri: patroPatriValue,
+      name: nameValue,
+      age: ageValue,
+      height: heightValue,
+      weight: weightValue,
+      gayerRong: gayerRongValue,
+      boibahicObostha: boibahicObosthaValue,
+      sthaiThikana: sthaiThikanaValue,
+      bortomanThikana: bortomanThikanaValue,
+      pesha: peshaValue,
+      monthSalary: monthSalaryValue,
+      clas: classValue,
+      babarPesha: babarPeshaValue,
+      mayerPesha: mayerPeshaValue,
+      namazPoreKina: namazPoreKinaValue,
+      quranPareKina: quranPareKinaValue,
+      apniKiSontanAseEmonKawKBiyeKorteChan:
+        apniKiSontanAseEmonKawKBiyeKorteChanValue,
+      sharirikOngohaniAseKina: sharirikOngohaniAseKinaValue,
+      dariAseKina: dariAseKinaValue,
+      pordaKoreKina: pordaKoreKinaValue,
+      jmonJannatiSathiChai: jmonJannatiSathiChaiValue,
+      patroPatrirBoyos: patroPatrirBoyosValue,
+      patroPatrirHeight: patroPatrirHeightValue,
+      patroPatrirGayerRong: patroPatrirGayerRongValue,
+      patroPatrirLekhapora: patroPatrirLekhaporaValue,
+      extraKisuLekha: extraKisuLekhaValue,
+      phoneNumber: phoneNumberValue,
+      FBIdLink: FBIdLinkValue,
+      amaderShebatiKmnLaglo: amaderShebatiKmnLagloValue,
+    })
+    .then(function () {
+      console.log();
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  //////////////////
+  //////////////////
 });
