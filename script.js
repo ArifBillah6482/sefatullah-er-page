@@ -194,7 +194,7 @@ const inputFunc = () => {
 function PostData() {
   set(ref(db, "Data/" + namee.value + " " + phoneNumber.value), {
     Time: new Date().toLocaleString(),
-    patroPatri: patroPatriValue,
+    পাত্র_পাত্রী: patroPatriValue,
     namee: nameValue,
     age: ageValue,
     height: heightValue,
