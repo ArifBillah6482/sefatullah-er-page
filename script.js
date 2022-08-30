@@ -47,14 +47,14 @@ const alertTag = document.querySelector(".alert");
 //////////////////
 //////////////////
 const firebaseConfig = {
-  apiKey: "AIzaSyBYzqQ-guO8P-Gn4imLN831vUR-iZ1oQI4",
-  authDomain: "sifatullah-api.firebaseapp.com",
-  databaseURL: "https://sifatullah-api-default-rtdb.firebaseio.com",
-  projectId: "sifatullah-api",
-  storageBucket: "sifatullah-api.appspot.com",
-  messagingSenderId: "694468053197",
-  appId: "1:694468053197:web:3e8fc955f9697549228184",
-  measurementId: "G-VFT35WE23Z",
+ apiKey: "AIzaSyDEyfnQIaneequJvCg5iBlu82O1SOaUsSE",
+    authDomain: "dindar-patro-patri.firebaseapp.com",
+    databaseURL: "https://dindar-patro-patri-default-rtdb.firebaseio.com",
+    projectId: "dindar-patro-patri",
+    storageBucket: "dindar-patro-patri.appspot.com",
+    messagingSenderId: "664411279515",
+    appId: "1:664411279515:web:1cae30fd8d8f234a20b63e",
+    measurementId: "G-BCYW1RZQWY"
 };
 
 const app = initializeApp(firebaseConfig);
