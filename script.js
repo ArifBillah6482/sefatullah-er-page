@@ -1,3 +1,13 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-analytics.js";
+import {
+  getDatabase,
+  ref,
+  set,
+  child,
+  update,
+  remove,
+} from "https://www.gstatic.com/firebasejs/9.9.3/firebase-database.js";
 const Form = document.querySelector(".Form");
 const patroPatri = document.getElementsByName("patroPatri");
 const namee = document.querySelector(".name");
@@ -29,13 +39,30 @@ const patroPatrirHeight = document.querySelector(".patroPatrirHeight");
 const patroPatrirGayerRong = document.querySelector(".patroPatrirGayerRong");
 const patroPatrirLekhapora = document.querySelector(".patroPatrirLekhapora");
 const extraKisuLekha = document.querySelector(".extraKisuLekha");
-
 const phoneNumber = document.querySelector(".phoneNumber");
 const FBIdLink = document.querySelector(".FBIdLink");
 const amaderShebatiKmnLaglo = document.querySelector(".amaderShebatiKmnLaglo");
 //////////////////
-const submitBtn = document.querySelector(".submitBtn");
 const alertTag = document.querySelector(".alert");
+//////////////////
+//////////////////
+const firebaseConfig = {
+  apiKey: "AIzaSyBYzqQ-guO8P-Gn4imLN831vUR-iZ1oQI4",
+  authDomain: "sifatullah-api.firebaseapp.com",
+  databaseURL: "https://sifatullah-api-default-rtdb.firebaseio.com",
+  projectId: "sifatullah-api",
+  storageBucket: "sifatullah-api.appspot.com",
+  messagingSenderId: "694468053197",
+  appId: "1:694468053197:web:3e8fc955f9697549228184",
+  measurementId: "G-VFT35WE23Z",
+};
+
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+//////////////////
+//////////////////
+
+const db = getDatabase();
 
 //////////////////
 //////////////////
@@ -135,7 +162,6 @@ let nameValue,
   patroPatrirGayerRongValue,
   patroPatrirLekhaporaValue,
   extraKisuLekhaValue,
-
   phoneNumberValue,
   FBIdLinkValue,
   amaderShebatiKmnLagloValue;
@@ -160,16 +186,57 @@ const inputFunc = () => {
   patroPatrirGayerRongValue = patroPatrirGayerRong.value;
   patroPatrirLekhaporaValue = patroPatrirLekhapora.value;
   extraKisuLekhaValue = extraKisuLekha.value;
- 
   phoneNumberValue = phoneNumber.value;
   FBIdLinkValue = FBIdLink.value;
   amaderShebatiKmnLagloValue = amaderShebatiKmnLaglo.value;
 };
 //////////////////
+function PostData() {
+  set(ref(db, "Data/" + namee.value + " " + phoneNumber.value), {
+    Time: new Date().toLocaleString(),
+    patroPatri: patroPatriValue,
+    namee: nameValue,
+    age: ageValue,
+    height: heightValue,
+    weight: weightValue,
+    gayerRong: gayerRongValue,
+    boibahicObostha: boibahicObosthaValue,
+    sthaiThikana: sthaiThikanaValue,
+    bortomanThikana: bortomanThikanaValue,
+    pesha: peshaValue,
+    monthSalary: monthSalaryValue,
+    clas: classValue,
+    babarPesha: babarPeshaValue,
+    mayerPesha: mayerPeshaValue,
+    namazPoreKina: namazPoreKinaValue,
+    quranPareKina: quranPareKinaValue,
+    apniKiSontanAseEmonKawKBiyeKorteChan:
+      apniKiSontanAseEmonKawKBiyeKorteChanValue,
+    sharirikOngohaniAseKina: sharirikOngohaniAseKinaValue,
+    dariAseKina: dariAseKinaValue,
+    pordaKoreKina: pordaKoreKinaValue,
+    jmonJannatiSathiChai: jmonJannatiSathiChaiValue,
+    patroPatrirBoyos: patroPatrirBoyosValue,
+    patroPatrirHeight: patroPatrirHeightValue,
+    patroPatrirGayerRong: patroPatrirGayerRongValue,
+    patroPatrirLekhapora: patroPatrirLekhaporaValue,
+    extraKisuLekha: extraKisuLekhaValue,
+    phoneNumber: phoneNumberValue,
+    FBIdLink: FBIdLinkValue,
+    amaderShebatiKmnLaglo: amaderShebatiKmnLagloValue,
+  })
+    .then(() => {
+      alert("Your information has been sent.");
+      alertTag.textContent = "Your information has been sent.";
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+}
 //////////////////
 Form.addEventListener("submit", (e) => {
-  e.preventDefault();
   alertTag.textContent = "Sending...";
+  e.preventDefault();
   patroPatriFunc();
   //////////////////
   inputFunc();
@@ -180,93 +247,7 @@ Form.addEventListener("submit", (e) => {
   sharirikOngohaniAseKinaFunc();
   dariAseKinaFunc();
   pordaKoreKinaFunc();
-  /////////////////
   //////////////////
-  axios
-    .post("https://dindar-patropatri-api.herokuapp.com/data", {
-    
-      patroPatri: patroPatriValue,
-      namee: nameValue,
-      age: ageValue,
-      height: heightValue,
-      weight: weightValue,
-      gayerRong: gayerRongValue,
-      boibahicObostha: boibahicObosthaValue,
-      sthaiThikana: sthaiThikanaValue,
-      bortomanThikana: bortomanThikanaValue,
-      pesha: peshaValue,
-      monthSalary: monthSalaryValue,
-      clas: classValue,
-      babarPesha: babarPeshaValue,
-      mayerPesha: mayerPeshaValue,
-      namazPoreKina: namazPoreKinaValue,
-      quranPareKina: quranPareKinaValue,
-      apniKiSontanAseEmonKawKBiyeKorteChan:
-        apniKiSontanAseEmonKawKBiyeKorteChanValue,
-      sharirikOngohaniAseKina: sharirikOngohaniAseKinaValue,
-      dariAseKina: dariAseKinaValue,
-      pordaKoreKina: pordaKoreKinaValue,
-      jmonJannatiSathiChai: jmonJannatiSathiChaiValue,
-      patroPatrirBoyos: patroPatrirBoyosValue,
-      patroPatrirHeight: patroPatrirHeightValue,
-      patroPatrirGayerRong: patroPatrirGayerRongValue,
-      patroPatrirLekhapora: patroPatrirLekhaporaValue,
-      extraKisuLekha: extraKisuLekhaValue,
-     
-      phoneNumber: phoneNumberValue,
-      FBIdLink: FBIdLinkValue,
-      amaderShebatiKmnLaglo: amaderShebatiKmnLagloValue,
-    
-    })
-    .then(function () {
-      console.log();
-      alert("Your information has been sent.");
-      alertTag.textContent = "Your information has been sent.";
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-  //////////////////
-  //////////////////
-  axios
-    .post("https://sifatullah-file-api.herokuapp.com/data", {
-      patroPatri: patroPatriValue,
-      name: nameValue,
-      age: ageValue,
-      height: heightValue,
-      weight: weightValue,
-      gayerRong: gayerRongValue,
-      boibahicObostha: boibahicObosthaValue,
-      sthaiThikana: sthaiThikanaValue,
-      bortomanThikana: bortomanThikanaValue,
-      pesha: peshaValue,
-      monthSalary: monthSalaryValue,
-      clas: classValue,
-      babarPesha: babarPeshaValue,
-      mayerPesha: mayerPeshaValue,
-      namazPoreKina: namazPoreKinaValue,
-      quranPareKina: quranPareKinaValue,
-      apniKiSontanAseEmonKawKBiyeKorteChan:
-        apniKiSontanAseEmonKawKBiyeKorteChanValue,
-      sharirikOngohaniAseKina: sharirikOngohaniAseKinaValue,
-      dariAseKina: dariAseKinaValue,
-      pordaKoreKina: pordaKoreKinaValue,
-      jmonJannatiSathiChai: jmonJannatiSathiChaiValue,
-      patroPatrirBoyos: patroPatrirBoyosValue,
-      patroPatrirHeight: patroPatrirHeightValue,
-      patroPatrirGayerRong: patroPatrirGayerRongValue,
-      patroPatrirLekhapora: patroPatrirLekhaporaValue,
-      extraKisuLekha: extraKisuLekhaValue,
-      phoneNumber: phoneNumberValue,
-      FBIdLink: FBIdLinkValue,
-      amaderShebatiKmnLaglo: amaderShebatiKmnLagloValue,
-    })
-    .then(function () {
-      console.log();
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-  //////////////////
-  //////////////////
+  PostData();
+  
 });
