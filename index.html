@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>দ্বিনদার পাএ/পাএীর সন্ধান</title>
-
-
+    <link rel="stylesheet" href="./CSS.css" />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -18,43 +17,54 @@
       <form class="Form">
         <div class="commonRadioDiv">
           <h3>আপনি কি চান? <span class="red">*</span></h3>
-          <div>
-            <input
-              type="radio"
-              name="patroPatri"
-              id="boy"
-              class="radioBtn patroPatri"
-              value="পাত্র"
-              required
-            />
-            <label for="boy">পাত্র</label>
-          </div>
-          <div>
-            <input
-              type="radio"
-              name="patroPatri"
-              id="girl"
-              class="radioBtn patroPatri"
-              value="পাত্রী"
-              required
-            />
-            <label for="girl">পাত্রী</label>
+          <div style="margin-left: -20px">
+            <div class="RadioWhite">
+              <div class="RadioItem">
+                <input
+                  type="radio"
+                  name="patroPatri"
+                  id="boy"
+                  class="radioBtn patroPatri"
+                  value="পাত্র"
+                  required
+                />
+
+                <label for="boy">পাত্র</label>
+              </div>
+            </div>
+            <div class="RadioWhite">
+              <div class="RadioItem">
+                <input
+                  type="radio"
+                  name="patroPatri"
+                  id="girl"
+                  class="radioBtn patroPatri"
+                  value="পাত্রী"
+                  required
+                />
+                <label for="girl">পাত্রী</label>
+              </div>
+            </div>
           </div>
         </div>
 
         <!--       -->
+
         <div class="div2">
           <h3>নাম- <span class="red">*</span></h3>
-          <input
-            type="text"
-            class="name"
-            name="name"
-            id="name"
-            placeholder="Enter your name..."
-            minlength="3"
-            maxlength="100"
-            required
-          />
+          <div class="AnimatedInput" style="width: 100%">
+            <input
+              type="text"
+              class="name"
+              name="name"
+              id="name"
+              minlength="3"
+              maxlength="100"
+              required
+              style="font-size: 18px"
+            />
+            <span style="font-size: 17px">Name</span>
+          </div>
         </div>
         <!--  -->
         <div class="commonInput">
@@ -63,7 +73,7 @@
             type="number"
             name="age"
             id="age"
-            placeholder="Enter your age..."
+            placeholder="_ _ _ _ _ _ _"
             maxlength="20"
             required
           />
@@ -76,7 +86,7 @@
             type="text"
             name="height"
             id="height"
-            placeholder="Enter your height..."
+            placeholder="_ _ _ _ _ _ _"
             maxlength="20"
             required
           />
@@ -88,7 +98,7 @@
             type="text"
             class="weight"
             name="weight"
-            placeholder="Enter your weight..."
+            placeholder="_ _ _ _ _ _ _"
             maxlength="20"
             required
           />
@@ -100,7 +110,7 @@
             type="text"
             class="gayerRong"
             name="gayerRong"
-            placeholder="..."
+            placeholder="_ _ _ _ _ _ _"
             maxlength="20"
             required
           />
@@ -114,7 +124,7 @@
             type="text"
             name="boibahicObostha"
             class="boibahicObostha"
-            placeholder="..."
+            placeholder="_ _ _ _ _ _ _"
             maxlength="20"
           />
         </div>
@@ -125,7 +135,7 @@
             type="text"
             class="sthaiThikana"
             name="sthaiThikana"
-            placeholder="..."
+            placeholder="_ _ _ _ _ _ _"
             maxlength="20"
             required
           />
@@ -137,7 +147,7 @@
             type="text"
             class="bortomanThikana"
             name="bortomanThikana"
-            placeholder="..."
+            placeholder="_ _ _ _ _ _ _"
             maxlength="20"
           />
         </div>
@@ -148,7 +158,7 @@
             type="text"
             name="pesha"
             class="pesha"
-            placeholder="..."
+            placeholder="_ _ _ _ _ _ _"
             maxlength="20"
             required
           />
@@ -160,7 +170,7 @@
             type="text"
             name="monthSalary"
             class="monthSalary"
-            placeholder="..."
+            placeholder="_ _ _ _ _ _ _"
             maxlength="20"
           />
         </div>
@@ -171,7 +181,7 @@
             type="text"
             name="class"
             class="class"
-            placeholder="..."
+            placeholder="_ _ _ _ _ _ _"
             maxlength="20"
             required
           />
@@ -182,7 +192,7 @@
           <input
             type="text"
             name="babarPesha"
-            placeholder="..."
+            placeholder="_ _ _ _ _ _ _"
             maxlength="20"
             class="babarPesha"
           />
@@ -193,7 +203,7 @@
           <input
             type="text"
             name="mayerPesha"
-            placeholder="..."
+            placeholder="_ _ _ _ _ _ _"
             maxlength="20"
             class="mayerPesha"
           />
@@ -202,65 +212,74 @@
 
         <div class="commonRadioDiv">
           <h3>নিয়োমিত নামাজ পড়েন? <span class="red">*</span></h3>
-          <div>
-            <input
-              type="radio"
-              name="namazPoreKina"
-              id="3255"
-              class="radioBtn"
-              required
-              value="নামাজ পড়ি "
-            />
-            <label for="3255">হ্যা</label>
-          </div>
-          <div>
-            <input
-              type="radio"
-              name="namazPoreKina"
-              id="546546"
-              class="radioBtn"
-              value="নামাজ পড়ি না"
-              required
-            />
-            <label for="546546">না</label>
-          </div>
-          <div>
-            <input
-              type="radio"
-              name="namazPoreKina"
-              id="35746"
-              class="radioBtn"
-              value="নামাজ মাঝে মাঝে পড়ি "
-              required
-            />
-            <label for="35746">মাঝে মাঝে পড়ি</label>
+          <div class="Radio-group">
+            <div>
+              <label class="Radio" for="3255">
+                <input
+                  type="radio"
+                  name="namazPoreKina"
+                  id="3255"
+                  class="radioBtn"
+                  required
+                  value="নামাজ পড়ি " />
+                হ্যা <span></span
+              ></label>
+            </div>
+            <div>
+              <label class="Radio" for="546546">
+                <input
+                  type="radio"
+                  name="namazPoreKina"
+                  id="546546"
+                  class="radioBtn"
+                  value="নামাজ পড়ি না"
+                  required />
+                না <span></span
+              ></label>
+            </div>
+            <div>
+              <label class="Radio" for="35746">
+                <input
+                  type="radio"
+                  name="namazPoreKina"
+                  id="35746"
+                  class="radioBtn"
+                  value="নামাজ মাঝে মাঝে পড়ি "
+                  required />
+                মাঝে মাঝে পড়ি <span></span
+              ></label>
+            </div>
           </div>
         </div>
         <!--  -->
 
         <div class="commonRadioDiv">
           <h3>কুরআন তেলাওয়াত জানেন? <span class="red">*</span></h3>
-          <div>
-            <input
-              type="radio"
-              name="quranPareKina"
-              id="24158"
-              class="radioBtn"
-              value="কুরআন জানি"
-              required
-            />
-            <label for="24158">হ্যা</label>
-          </div>
-          <div>
-            <input
-              type="radio"
-              name="quranPareKina"
-              id="2418"
-              class="radioBtn"
-              value="কুরআন জানি না"
-              required
-            />
-            <label for="2418">না</label>
+          <div class="Radio-group">
+            <div>
+              <label for="24158" class="Radio">
+                <input
+                  type="radio"
+                  name="quranPareKina"
+                  id="24158"
+                  class="radioBtn"
+                  value="কুরআন জানি"
+                  required />
+                হ্যা <span></span
+              ></label>
+            </div>
+            <div>
+              <label class="Radio" for="2418">
+                <input
+                  type="radio"
+                  name="quranPareKina"
+                  id="2418"
+                  class="radioBtn"
+                  value="কুরআন জানি না"
+                  required />
+                না <span></span
+              ></label>
+            </div>
           </div>
         </div>
         <!--  -->
@@ -270,25 +289,29 @@
             আপনি কি স্বামী হারা / ডিভোর্সি / সন্তান আছে এমন কাউকে বিবাহ করতে
             চান?-
           </h3>
-          <div>
-            <input
-              type="radio"
-              name="apniKiSontanAseEmonKawKBiyeKorteChan"
-              id="2415855"
-              class="radioBtn"
-              value="হ্যা"
-            />
-            <label for="2415855">হ্যা</label>
-          </div>
-          <div>
-            <input
-              type="radio"
-              name="apniKiSontanAseEmonKawKBiyeKorteChan"
-              id="2414268"
-              class="radioBtn"
-              value=" না"
-            />
-            <label for="2414268">না</label>
+          <div class="Radio-group">
+            <div>
+              <label for="2415855" class="Radio">
+                <input
+                  type="radio"
+                  name="apniKiSontanAseEmonKawKBiyeKorteChan"
+                  id="2415855"
+                  class="radioBtn"
+                  value="হ্যা" />
+                হ্যা<span></span
+              ></label>
+            </div>
+            <div>
+              <label for="2414268" class="Radio">
+                <input
+                  type="radio"
+                  name="apniKiSontanAseEmonKawKBiyeKorteChan"
+                  id="2414268"
+                  class="radioBtn"
+                  value=" না" />
+                না <span></span
+              ></label>
+            </div>
           </div>
         </div>
         <!--  -->
@@ -296,76 +319,91 @@
           <h3>
             শারীরিক অঙ্গহানি / বড় ধরনের কোনো রোগ আছে? <span class="red">*</span>
           </h3>
-          <div>
-            <input
-              type="radio"
-              name="sharirikOngohaniAseKina"
-              id="241155"
-              class="radioBtn"
-              value="হ্যা"
-              required
-            />
-            <label for="241155">হ্যা</label>
-          </div>
-          <div>
-            <input
-              type="radio"
-              name="sharirikOngohaniAseKina"
-              id="241174268"
-              class="radioBtn"
-              value=" না"
-              required
-            />
-            <label for="241174268">না</label>
+          <div class="Radio-group">
+            <div>
+              <label for="241155" class="Radio">
+                <input
+                  type="radio"
+                  name="sharirikOngohaniAseKina"
+                  id="241155"
+                  class="radioBtn"
+                  value="হ্যা"
+                  required />
+                হ্যা <span></span
+              ></label>
+            </div>
+
+            <div>
+              <label for="241174268" class="Radio">
+                <input
+                  type="radio"
+                  name="sharirikOngohaniAseKina"
+                  id="241174268"
+                  class="radioBtn"
+                  value=" না"
+                  required />
+                না <span></span
+              ></label>
+            </div>
           </div>
         </div>
         <!--  -->
 
         <div class="commonRadioDiv">
           <h3>(পুরুষ হলে) সুন্নতি দাড়ি আছে?</h3>
-          <div>
-            <input
-              type="radio"
-              name="dariAseKina"
-              id="24f1155"
-              class="radioBtn"
-              value=" আছে"
-            />
-            <label for="24f1155">হ্যা</label>
-          </div>
-          <div>
-            <input
-              type="radio"
-              name="dariAseKina"
-              id="24117p4268"
-              class="radioBtn"
-              value=" নাই"
-            />
-            <label for="24117p4268">না</label>
+          <div class="Radio-group">
+            <div>
+              <label for="24f1155" class="Radio">
+                <input
+                  type="radio"
+                  name="dariAseKina"
+                  id="24f1155"
+                  class="radioBtn"
+                  value=" আছে" />
+
+                হ্যা <span></span
+              ></label>
+            </div>
+
+            <div>
+              <label for="24117p4268" class="Radio">
+                <input
+                  type="radio"
+                  name="dariAseKina"
+                  id="24117p4268"
+                  class="radioBtn"
+                  value=" নাই" />
+                না <span></span
+              ></label>
+            </div>
           </div>
         </div>
         <!--  -->
         <div class="commonRadioDiv">
           <h3>(মেয়ে হলে) খাছ পর্দা করেন?</h3>
-          <div>
-            <input
-              type="radio"
-              name="pordaKoreKina"
-              id="24fa55"
-              class="radioBtn"
-              value="পর্দা করি"
-            />
-            <label for="24fa55">হ্যা</label>
-          </div>
-          <div>
-            <input
-              type="radio"
-              name="pordaKoreKina"
-              id="241p4268"
-              class="radioBtn"
-              value="পর্দা করি না"
-            />
-            <label for="241p4268">না</label>
+          <div class="Radio-group">
+            <div>
+              <label for="24fa55" class="Radio">
+                <input
+                  type="radio"
+                  name="pordaKoreKina"
+                  id="24fa55"
+                  class="radioBtn"
+                  value="পর্দা করি" />হ্যা <span></span
+              ></label>
+            </div>
+
+            <div>
+              <label for="241p4268" class="Radio">
+                <input
+                  type="radio"
+                  name="pordaKoreKina"
+                  id="241p4268"
+                  class="radioBtn"
+                  value="পর্দা করি না" />
+                না <span></span
+              ></label>
+            </div>
           </div>
         </div>
         <!--  -->
@@ -378,7 +416,7 @@
             type="text"
             name="jmonJannatiSathiChai"
             class="jmonJannatiSathiChai"
-            placeholder="..."
+            placeholder="_ _ _ _ _ _ _"
             maxlength="2000"
           />
         </div>
@@ -389,7 +427,7 @@
             type="text"
             name="patroPatrirBoyos"
             class="patroPatrirBoyos"
-            placeholder="..."
+            placeholder="_ _ _ _ _ _ _"
             maxlength="20"
           />
         </div>
@@ -400,7 +438,7 @@
             type="text"
             name="patroPatrirHeight"
             class="patroPatrirHeight"
-            placeholder="..."
+            placeholder="_ _ _ _ _ _ _"
             maxlength="20"
           />
         </div>
@@ -411,7 +449,7 @@
             type="text"
             name="patroPatrirGayerRong"
             class="patroPatrirGayerRong"
-            placeholder="..."
+            placeholder="_ _ _ _ _ _ _"
             maxlength="20"
           />
         </div>
@@ -422,7 +460,7 @@
             type="text"
             name="patroPatrirLekhapora"
             class="patroPatrirLekhapora"
-            placeholder="..."
+            placeholder="_ _ _ _ _ _ _"
             maxlength="20"
           />
         </div>
@@ -434,17 +472,11 @@
             type="text"
             name="extraKisuLekha"
             class="extraKisuLekha"
-            placeholder="..."
+            placeholder="_ _ _ _ _ _ _"
             maxlength="2000"
           />
         </div>
         <!--  -->
-       
-          
-          
-   
-          
-
 
         <div class="commonInput">
           <h3>আপনার মোবাইল নাম্বার<span class="red">*</span></h3>
@@ -461,14 +493,14 @@
         </div>
         <!--  -->
         <div class="commonInput">
-          <h3>ফেইসবুক আইডির নাম ও লিঙ্ক- <span class='red'>*</span></h3>
+          <h3>ফেইসবুক আইডির নাম ও লিঙ্ক- <span class="red">*</span></h3>
           <p>পরবর্তী যোগাযোগের জন্য আপনার ফেইসবুক আইডি নাম ও লিংক দিন।</p>
           <input
             type="text"
             name="FBIdLink"
             class="FBIdLink"
             maxlength="200"
-            placeholder="Facebook Id Link..."
+            placeholder="_ _ _ _ _ _ _"
           />
         </div>
         <!--  -->
@@ -479,20 +511,22 @@
             name="amaderShebatiKmnLaglo"
             class="amaderShebatiKmnLaglo"
             maxlength="200"
-            placeholder="..."
+            placeholder="_ _ _ _ _ _ _"
           />
         </div>
         <p class="alert" style="color: blueviolet; padding: 5px 0 5px 30px"></p>
 
         <div class="btns">
-          <button type="submit" class="submitBtn">Submit</button>
-          <button type="reset">Clear Form</button>
+          <button type="submit" class="submitBtn AnimatedBtnPurple">
+            <span>Submit</span>
+          </button>
+          <button type="reset" class="Btn">Clear Form</button>
         </div>
       </form>
     </div>
     <!--  -->
 
     <!--  -->
-   <script type="module" src="./script.js"></script>
+    <script type="module" src="./script.js"></script>
   </body>
 </html>
