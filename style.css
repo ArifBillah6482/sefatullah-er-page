@@ -1,11 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-  letter-spacing: 1px;
-  transition: all 0.3s;
-}
 .red {
   color: red;
 }
@@ -24,7 +16,7 @@ body {
 }
 .allContainer {
   border-top: 10px purple solid;
-  border-bottom: 10px purple solid;
+  border-bottom: 15px purple solid;
   border-radius: 10px;
   margin: 5px;
   margin-bottom: 10px;
@@ -69,14 +61,7 @@ form > .div2 {
   border-radius: 3px;
   margin: 20px 0;
 }
-form > .div2 > input {
-  margin-top: 10px;
-  padding: 8px;
-  border: none;
-  border-bottom: 2px solid purple;
-  border-radius: 5px;
-  font-size: large;
-  outline: none;
+form > .div2 > .AnimatedInput > input {
   text-transform: capitalize;
 }
 form > .div2 > input:focus {
@@ -91,8 +76,8 @@ form > .commonInput {
 }
 form > .commonInput > input {
   margin-top: 10px;
-  padding: 8px;
-  border: none;
+  padding: 12px 8px;
+  border: 1px solid rgb(210, 210, 210);
   border-bottom: 2px solid purple;
   border-radius: 5px;
   font-size: large;
@@ -107,27 +92,6 @@ form > .commonInput > input:focus {
   justify-content: space-between;
   padding: 10px;
   padding-bottom: 20px;
-}
-.btns > button:nth-child(1) {
-  border: 1px solid blueviolet;
-  padding: 8px 20px;
-  background-color: rgb(139, 22, 248);
-  color: white;
-  border-radius: 5px;
-  font-size: large;
-  box-shadow: 0 0 5px purple;
-}
-.btns > button:nth-child(1):hover {
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgb(163, 2, 163);
-}
-.btns > button:nth-child(2) {
-  border: 1px solid blueviolet;
-  padding: 8px 20px;
-  background-color: white;
-  color: black;
-  border-radius: 5px;
-  font-size: large;
 }
 /*  */
 /*  */
