@@ -192,7 +192,8 @@ const inputFunc = () => {
 };
 //////////////////
 function PostData() {
-  set(ref(db, "Data/" + namee.value + " " + phoneNumber.value), {
+  let ids = Math.floor(Math.random() * 106591);
+  set(ref(db, "Data/" + ids + " " + phoneNumber.value), {
     Time: new Date().toLocaleString(),
     পাত্র_পাত্রী: patroPatriValue,
     নাম: nameValue,
