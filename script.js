@@ -192,8 +192,8 @@ const inputFunc = () => {
 };
 //////////////////
 function PostData() {
-  let ids1 = Math.floor(Math.random() * 10000);
-  let ids2 = Math.floor(Math.random() * 20000);
+  let ids1 = Math.floor(Math.random() * 60300);
+  let ids2 = Math.floor(Math.random() * 40500);
   let ids = ids1 + ids2;
   set(ref(db, "Data/" + ids), {
     Time: new Date().toLocaleString(),
