@@ -194,7 +194,7 @@ const inputFunc = () => {
 function PostData() {
   let ids1 = Math.floor(Math.random() * 60300);
   let ids2 = Math.floor(Math.random() * 40500);
-  let ids = ids1 + ids2;
+  let ids = ids1 + "" + ids2;
   set(ref(db, "Data/" + ids), {
     Time: new Date().toLocaleString(),
     পাত্র_পাত্রী: patroPatriValue,
