@@ -116,20 +116,68 @@
           />
         </div>
         <!--  -->
-        <div class="commonInput">
-          <h3>
-            বৈবাহিক অবস্থা, (ডিবোর্সি হলে বা বাচ্চা থাকলে কারন সহ উল্লেখ করেন।)
+        <div
+          class="commonInput"
+          style="display: flex; flex-direction: row; padding: 40px 12px"
+        >
+          <h3 style="font-size: 20px">
+            বৈবাহিক অবস্থা <span class="red">*</span>
           </h3>
-          <input
-            type="text"
-            name="boibahicObostha"
-            class="boibahicObostha"
-            placeholder="_ _ _ _ _ _ _"
-            maxlength="20"
-          />
+          <div class="Select">
+            <select
+              name="boibahicObostha"
+              class="boibahicObostha"
+              id=""
+              required
+              style="
+                margin-top: 10px;
+                padding: 8px;
+                font-size: 18px;
+                letter-spacing: 0px;
+              "
+            >
+              <option value="">সিলেক্ট করুন</option>
+              <option value="অবিবাহিত">অবিবাহিত</option>
+              <option value="বিবাহিত">বিবাহিত</option>
+              <option value="ডিভোর্সড">ডিভোর্সড</option>
+            </select>
+          </div>
         </div>
+
         <!--  -->
-           <div class="commonInput">
+        <div
+          class="commonInput"
+          style="display: flex; flex-direction: row; padding: 40px 12px"
+        >
+          <h3 style="font-size: 20px">বিভাগ <span class="red">*</span></h3>
+          <div class="Select">
+            <select
+              name="bivag"
+              class="bivag"
+              id=""
+              required
+              style="
+                margin-top: 10px;
+                padding: 8px;
+                font-size: 18px;
+                letter-spacing: 0px;
+              "
+            >
+              <option value="">সিলেক্ট করুন</option>
+              <option value="ঢাকা">ঢাকা</option>
+              <option value="চট্রগ্রাম">চট্রগ্রাম</option>
+              <option value="খুলনা">খুলনা</option>
+              <option value="বরিশাল">বরিশাল</option>
+              <option value="রংপুর">রংপুর</option>
+              <option value="রাজশাহী">রাজশাহী</option>
+              <option value="সিলেট">সিলেট</option>
+              <option value="ময়মনসিংহ">ময়মনসিংহ</option>
+            </select>
+          </div>
+        </div>
+
+        <!--  -->
+        <div class="commonInput">
           <h3>বর্তমান ঠিকানা-</h3>
           <input
             type="text"
@@ -139,8 +187,7 @@
             maxlength="20"
           />
         </div>
-        
-        
+
         <div class="commonInput">
           <h3>স্থায়ী ঠিকানা- <span class="red">*</span></h3>
           <input
@@ -153,7 +200,7 @@
           />
         </div>
         <!--  -->
-     
+
         <!--  -->
         <div class="commonInput">
           <h3>পেশা- <span class="red">*</span></h3>
@@ -168,13 +215,14 @@
         </div>
         <!--  -->
         <div class="commonInput">
-          <h3>মাসিক ইনকাম-</h3>
+          <h3>মাসিক ইনকাম- <span class="red">*</span></h3>
           <input
             type="text"
             name="monthSalary"
             class="monthSalary"
             placeholder="_ _ _ _ _ _ _"
             maxlength="20"
+            required
           />
         </div>
         <!--  -->
@@ -191,13 +239,14 @@
         </div>
         <!--  -->
         <div class="commonInput">
-          <h3>বাবার পেশা-</h3>
+          <h3>বাবার পেশা- <span class="red">*</span></h3>
           <input
             type="text"
             name="babarPesha"
             placeholder="_ _ _ _ _ _ _"
             maxlength="20"
             class="babarPesha"
+            required
           />
         </div>
         <!--  -->
@@ -223,8 +272,8 @@
                   name="namazPoreKina"
                   id="3255"
                   class="radioBtn"
-                  required
-                  value="নামাজ পড়ি " />
+                  value="নামাজ পড়ি "
+                  required />
                 হ্যা <span></span
               ></label>
             </div>
@@ -413,7 +462,8 @@
 
         <div class="commonInput">
           <h3>
-           দ্বীনদার পাত্র / পাত্রীর সন্ধান পেজে আপনি কি ধরনের জান্নাতি সাথী চান?
+            দ্বীনদার পাত্র / পাত্রীর সন্ধান পেজে আপনি কি ধরনের জান্নাতি সাথী
+            চান?
           </h3>
           <input
             type="text"
@@ -425,7 +475,7 @@
         </div>
         <!--  -->
         <div class="commonInput">
-          <h3>পাত্র/পাত্রীর বয়স-</h3>
+          <h3>পাত্র/পাত্রীর বয়স কত চান?-</h3>
           <input
             type="text"
             name="patroPatrirBoyos"
@@ -436,7 +486,7 @@
         </div>
         <!--  -->
         <div class="commonInput">
-          <h3>পাত্র/পাত্রীর উচ্চতা-</h3>
+          <h3>পাত্র/পাত্রীর উচ্চতা কত চান?-</h3>
           <input
             type="text"
             name="patroPatrirHeight"
@@ -447,7 +497,7 @@
         </div>
         <!--  -->
         <div class="commonInput">
-          <h3>পাত্র/পাত্রীর গায়ের রং-</h3>
+          <h3>পাত্র/পাত্রীর গায়ের রং কেমন চান?-</h3>
           <input
             type="text"
             name="patroPatrirGayerRong"
@@ -489,7 +539,6 @@
             type="number"
             name="phoneNumber"
             class="phoneNumber"
-            maxlength="11"
             placeholder="01xxxxxxxxx"
             required
           />
@@ -504,6 +553,7 @@
             class="FBIdLink"
             maxlength="200"
             placeholder="_ _ _ _ _ _ _"
+            required
           />
         </div>
         <!--  -->
@@ -517,13 +567,16 @@
             placeholder="_ _ _ _ _ _ _"
           />
         </div>
-        <p class="alert" style="color: blueviolet; padding: 5px 0 5px 30px; font-size: 18px"></p>
+        <p
+          class="alert"
+          style="color: blueviolet; padding: 5px 0 5px 30px; font-size: 18px"
+        ></p>
 
         <div class="btns">
           <button type="submit" class="submitBtn AnimatedBtnPurple">
-            <span>Submit</span>
+            <span>জমা দিন</span>
           </button>
-          <button type="reset" class="Btn">Clear Form</button>
+          <button type="reset" class="Btn">মুছে ফেলুন</button>
         </div>
       </form>
     </div>
