@@ -31,6 +31,7 @@ const apniKiSontanAseEmonKawKBiyeKorteChan = document.getElementsByName(
 const sharirikOngohaniAseKina = document.getElementsByName(
   "sharirikOngohaniAseKina"
 );
+const bivag = document.querySelector(".bivag");
 const dariAseKina = document.getElementsByName("dariAseKina");
 const pordaKoreKina = document.getElementsByName("pordaKoreKina");
 const jmonJannatiSathiChai = document.querySelector(".jmonJannatiSathiChai");
@@ -47,14 +48,14 @@ const alertTag = document.querySelector(".alert");
 //////////////////
 //////////////////
 const firebaseConfig = {
- apiKey: "AIzaSyDEyfnQIaneequJvCg5iBlu82O1SOaUsSE",
-    authDomain: "dindar-patro-patri.firebaseapp.com",
-    databaseURL: "https://dindar-patro-patri-default-rtdb.firebaseio.com",
-    projectId: "dindar-patro-patri",
-    storageBucket: "dindar-patro-patri.appspot.com",
-    messagingSenderId: "664411279515",
-    appId: "1:664411279515:web:1cae30fd8d8f234a20b63e",
-    measurementId: "G-BCYW1RZQWY"
+  apiKey: "AIzaSyDEyfnQIaneequJvCg5iBlu82O1SOaUsSE",
+  authDomain: "dindar-patro-patri.firebaseapp.com",
+  databaseURL: "https://dindar-patro-patri-default-rtdb.firebaseio.com",
+  projectId: "dindar-patro-patri",
+  storageBucket: "dindar-patro-patri.appspot.com",
+  messagingSenderId: "664411279515",
+  appId: "1:664411279515:web:1cae30fd8d8f234a20b63e",
+  measurementId: "G-BCYW1RZQWY",
 };
 
 const app = initializeApp(firebaseConfig);
@@ -123,6 +124,7 @@ const sharirikOngohaniAseKinaFunc = () => {
     sharirikOngohaniAseKinaValue = "";
   }
 };
+
 const dariAseKinaFunc = () => {
   if (dariAseKina[0].checked) {
     dariAseKinaValue = dariAseKina[0].value;
@@ -149,6 +151,7 @@ let nameValue,
   weightValue,
   gayerRongValue,
   boibahicObosthaValue,
+  bivagValue,
   sthaiThikanaValue,
   bortomanThikanaValue,
   peshaValue,
@@ -173,6 +176,7 @@ const inputFunc = () => {
   weightValue = weight.value;
   gayerRongValue = gayerRong.value;
   boibahicObosthaValue = boibahicObostha.value;
+  bivagValue = bivag.value;
   sthaiThikanaValue = sthaiThikana.value;
   bortomanThikanaValue = bortomanThikana.value;
   peshaValue = pesha.value;
@@ -192,23 +196,29 @@ const inputFunc = () => {
 };
 //////////////////
 function PostData() {
-  let ids1 = Math.floor(Math.random() * 60300);
-  let ids2 = Math.floor(Math.random() * 40500);
-  let ids = ids1 + "" + ids2;
-  set(ref(db, "Data/" + ids), {
+  let id1 = Math.floor(Math.random() * 40000);
+  let id2 = Math.floor(Math.random() * 45000);
+  let id3 = Math.floor(Math.random() * 492);
+  let id4 = Math.floor(Math.random() * 311);
+  let id5 = Math.floor(Math.random() * 199);
+  //////////////////
+  let id = id1 + "" + id2 + "" + id3 + "" + id4 + "" + id5;
+  set(ref(db, "Data/" + id), {
     Time: new Date().toLocaleString(),
+    id: id,
     পাত্র_পাত্রী: patroPatriValue,
     নাম: nameValue,
     বয়স: ageValue,
-    উচ্চতা : heightValue,
+    উচ্চতা: heightValue,
     ওজন: weightValue,
     গায়ের_রং: gayerRongValue,
-    বৈবাহিক_অবস্থা : boibahicObosthaValue,
-    স্হায়ী_ঠিকানা : sthaiThikanaValue,
+    বৈবাহিক_অবস্থা: boibahicObosthaValue,
+    বিভাগ: bivagValue,
+    স্হায়ী_ঠিকানা: sthaiThikanaValue,
     বর্তমানঠিকানা: bortomanThikanaValue,
     পেশা: peshaValue,
     মাসিকইনকাম: monthSalaryValue,
-    শিক্ষাগতযোগ্যতা : classValue,
+    শিক্ষাগতযোগ্যতা: classValue,
     বাবারপেশা: babarPeshaValue,
     মায়েরপেশা: mayerPeshaValue,
     আপনিকি_নিওমিত_নামাজপড়েন: namazPoreKinaValue,
@@ -218,19 +228,20 @@ function PostData() {
     আপনারকিশারিরিকঅঙ্গহানিবাবড়োকোনোরোগআছে: sharirikOngohaniAseKinaValue,
     আপনারকিসুন্নতিদারিআছে: dariAseKinaValue,
     আপনিকিপর্দাকরেন: pordaKoreKinaValue,
-    দ্বিনদারপাত্রপাত্রীসন্ধানপেজেআপনিকিধরনেরজীবনসঙ্গীচান: jmonJannatiSathiChaiValue,
+    দ্বিনদারপাত্রপাত্রীসন্ধানপেজেআপনিকিধরনেরজীবনসঙ্গীচান:
+      jmonJannatiSathiChaiValue,
     পাএপাএীবয়স: patroPatrirBoyosValue,
     পাত্রপাত্রীউচ্চতা: patroPatrirHeightValue,
     পাত্রপাত্রীগায়েররং: patroPatrirGayerRongValue,
     পাএপাএীলেখাপড়া: patroPatrirLekhaporaValue,
     এস্ট্রাকিছু: extraKisuLekhaValue,
-    মোবাইল : phoneNumberValue,
+    মোবাইল: phoneNumberValue,
     এফবিআইডিলিংক: FBIdLinkValue,
     আমাদেরসেবা: amaderShebatiKmnLagloValue,
   })
     .then(() => {
-      alert("Your information has been sent.");
-      alertTag.textContent = "Your information has been sent.";
+      alert("আপনার তথ্য পাঠানো হয়েছে।");
+      alertTag.textContent = "আপনার তথ্য পাঠানো হয়েছে।";
     })
     .catch((err) => {
       console.log(err);
@@ -238,8 +249,8 @@ function PostData() {
 }
 //////////////////
 Form.addEventListener("submit", (e) => {
-  alertTag.textContent = "Sending...";
   e.preventDefault();
+  alertTag.textContent = "তথ্য পাঠানো হচ্ছে...";
   patroPatriFunc();
   //////////////////
   inputFunc();
@@ -252,5 +263,4 @@ Form.addEventListener("submit", (e) => {
   pordaKoreKinaFunc();
   //////////////////
   PostData();
-  
 });
