@@ -203,7 +203,10 @@ function PostData() {
   let id5 = Math.floor(Math.random() * 199);
   //////////////////
   let id = id1 + "" + id2 + "" + id3 + "" + id4 + "" + id5;
-  set(ref(db, "PendingBiodata/" + id), {
+  let fileName1 = nameValue.split(/\W/g);
+  let fileName2 = phoneNumberValue.split(/\D/g);
+  let fileName = fileName1 + "" + fileName2;
+  set(ref(db, "PendingBiodata/" + fileName), {
     Time: new Date().toLocaleString(),
     id: id,
     পাত্র_পাত্রী: patroPatriValue,
@@ -240,9 +243,52 @@ function PostData() {
     আমাদেরসেবা: amaderShebatiKmnLagloValue,
   })
     .then(() => {
-      alert("আপনার তথ্য পাঠানো হয়েছে।");
       alertTag.textContent = "আপনার তথ্য পাঠানো হয়েছে।";
+      alert(`আপনার তথ্য পাঠানো হয়েছে। আমাদের ফেসবুক পেইজে মেসেজ দিতে "OK" বাটনে ক্লিক করুন।`);    
+     
     })
+    .catch((err) => {
+      console.log(err);
+    });
+  ///////////
+  //////////
+  set(ref(db, "Data/" + fileName), {
+    Time: new Date().toLocaleString(),
+    id: id,
+    পাত্র_পাত্রী: patroPatriValue,
+    নাম: nameValue,
+    বয়স: ageValue,
+    উচ্চতা: heightValue,
+    ওজন: weightValue,
+    গায়ের_রং: gayerRongValue,
+    বৈবাহিক_অবস্থা: boibahicObosthaValue,
+    বিভাগ: bivagValue,
+    স্হায়ী_ঠিকানা: sthaiThikanaValue,
+    বর্তমানঠিকানা: bortomanThikanaValue,
+    পেশা: peshaValue,
+    মাসিকইনকাম: monthSalaryValue,
+    শিক্ষাগতযোগ্যতা: classValue,
+    বাবারপেশা: babarPeshaValue,
+    মায়েরপেশা: mayerPeshaValue,
+    আপনিকি_নিওমিত_নামাজপড়েন: namazPoreKinaValue,
+    আপনিকি_কুরআান_পড়তে_যানেন: quranPareKinaValue,
+    আপনিকি_সন্তানআছে_এমন_কাউকে_বিবাহকরতেচান:
+      apniKiSontanAseEmonKawKBiyeKorteChanValue,
+    আপনারকিশারিরিকঅঙ্গহানিবাবড়োকোনোরোগআছে: sharirikOngohaniAseKinaValue,
+    আপনারকিসুন্নতিদারিআছে: dariAseKinaValue,
+    আপনিকিপর্দাকরেন: pordaKoreKinaValue,
+    দ্বিনদারপাত্রপাত্রীসন্ধানপেজেআপনিকিধরনেরজীবনসঙ্গীচান:
+      jmonJannatiSathiChaiValue,
+    পাএপাএীবয়স: patroPatrirBoyosValue,
+    পাত্রপাত্রীউচ্চতা: patroPatrirHeightValue,
+    পাত্রপাত্রীগায়েররং: patroPatrirGayerRongValue,
+    পাএপাএীলেখাপড়া: patroPatrirLekhaporaValue,
+    এস্ট্রাকিছু: extraKisuLekhaValue,
+    মোবাইল: phoneNumberValue,
+    এফবিআইডিলিংক: FBIdLinkValue,
+    আমাদেরসেবা: amaderShebatiKmnLagloValue,
+  })
+    .then(() => window.location = "https://www.facebook.com/DeendarPatraPatriPandhan";)
     .catch((err) => {
       console.log(err);
     });
